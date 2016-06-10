@@ -30,7 +30,7 @@ module.exports = (pluginContext) => {
   function execute(id, payload) {
     if (payload === 'generate') {
       var salt = pref.salt;
-      var hash = skein(id + salt);
+      var hash = skein(id.trim() + salt);
       var start = HexToInt(hash.substring(0,1)) + HexToInt(hash.substring(1,2)) + HexToInt(hash.substring(2,3));
       var end = start + pref.passLength;
       var hashOut = base91.encode(hash).substring(start, end);
