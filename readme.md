@@ -16,3 +16,7 @@ and method of generating passwords.
 2. Type `/hpm install hain-plugin-passgen` into Hain
 3. Type `/pass` and hit enter in Hain to go to the preferences screen. Paste the randomly generated salt (or a custom salt) into the Salt field
 4. Done. You can now generate passwords.
+
+## Links to Dependencies
+node-copy-paste https://github.com/notatestuser/node-copy-paste  
+Base91 https://github.com/mscdex/base91.js
