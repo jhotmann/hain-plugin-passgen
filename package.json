@@ -1,6 +1,6 @@
 {
   "name": "hain-plugin-passgen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A little hain-plugin to generate passwords",
   "main": "index.js",
   "scripts": {
