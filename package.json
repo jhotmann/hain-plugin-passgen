@@ -7,10 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "hain-0.4.0"
+    "hain-0.4.0",
+    "hain",
+    "security",
+    "password"
   ],
   "author": "Jordan Hotmann",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhotmann/hain-plugin-passgen.git"
+  },
+  "homepage": "https://github.com/jhotmann/hain-plugin-passgen#readme",
+  "bugs": {
+    "url": "https://github.com/jhotmann/hain-plugin-passgen/issues"
+  },
   "hain": {
     "prefix": "/pass",
     "usage": "type /pass something to generate a password",
