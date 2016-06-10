@@ -1,0 +1,22 @@
+{
+  "name": "hain-plugin-passgen",
+  "version": "0.0.1",
+  "description": "A little hain-plugin to generate passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hain-0.4.0"
+  ],
+  "author": "Jordan Hotmann",
+  "license": "MIT",
+  "hain": {
+    "prefix": "/pass",
+    "usage": "type /pass something to generate a password",
+    "icon": "#fa fa-unlock-alt"
+  },
+  "dependencies": {
+    "copy-paste-win32fix": "^1.2.0"
+  }
+}

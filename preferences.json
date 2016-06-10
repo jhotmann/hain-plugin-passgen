@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "salt": {
+      "type": "string",
+      "title": "Salt (you should probably save a backup of this somewhere)",
+      "default": ""
+    },
+    "passLength": {
+      "type": "integer",
+      "title": "Password Length",
+      "default": 40,
+      "minimum": 15,
+      "maximum": 100,
+      "errorMessages": {
+        "minimum": "Password Length can't be less than 15",
+        "maximum": "Password Length can't be more than 100"
+      }
+    }
+  }
+}
