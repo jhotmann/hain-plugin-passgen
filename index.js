@@ -6,7 +6,15 @@ var skein=(function(){var p,q,u,v,w,z,A,B,C,D,E,L;L=function(a,b){this.lo=a?a:0;
 
 module.exports = (pluginContext) => {
   const prefObj = pluginContext.preferences;
-  const pref = prefObj.get();
+  var pref = prefObj.get();
+
+  function onPrefUpdate(updatedPref) {
+    pref = updatedPref;
+  }
+
+  function startup() {
+    prefObj.on('update', onPrefUpdate);
+  }
   
   function search(query, res) {
     if (pref.salt.length === 0) {
@@ -25,6 +33,12 @@ module.exports = (pluginContext) => {
         desc: query
       });
     }
+    res.add({
+      id: 'help',
+      payload: 'help',
+      title: 'Get help',
+      desc: 'Opens readme on GitHub'
+    });
   }
 
   function execute(id, payload) {
@@ -35,17 +49,19 @@ module.exports = (pluginContext) => {
       var end = start + pref.passLength;
       var hashOut = base91.encode(hash).substring(start, end);
       ncp.copy(hashOut);
-      pluginContext.toast.enqueue('Password copied to clipboard!');
-      setTimeout(function() {pluginContext.app.close();}, 2000);
+      pluginContext.toast.enqueue('Password copied to clipboard!', 1000);
+      setTimeout(function() {pluginContext.app.close();}, 1500);
     } else if (payload === 'preferences') {
       ncp.copy(id);
       pluginContext.app.openPreferences('hain-plugin-passgen');
+    } else if (payload === 'help') {
+      pluginContext.shell.openExternal('https://github.com/jhotmann/hain-plugin-passgen#readme');
     } else {
       return;
     }
   }
 
-  return { search, execute };
+  return { startup, search, execute };
 };
 
 function HexToInt(hexString) {
