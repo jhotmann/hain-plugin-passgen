@@ -19,4 +19,5 @@ and method of generating passwords.
 
 ## Links to Dependencies
 Base91 https://github.com/mscdex/base91.js
+
 Skein hash https://github.com/drostie/sha3-js
