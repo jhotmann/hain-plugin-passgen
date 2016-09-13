@@ -1,6 +1,6 @@
 {
   "name": "hain-plugin-passgen",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A little hain-plugin to generate passwords",
   "main": "index.js",
   "scripts": {
@@ -26,8 +26,5 @@
     "prefix": "/pass",
     "usage": "type /pass something to generate a password",
     "icon": "#fa fa-unlock-alt"
-  },
-  "dependencies": {
-    "copy-paste-win32fix": "^1.2.0"
   }
 }
