@@ -18,5 +18,5 @@ and method of generating passwords.
 4. Done. You can now generate passwords.
 
 ## Links to Dependencies
-node-copy-paste https://github.com/notatestuser/node-copy-paste  
 Base91 https://github.com/mscdex/base91.js
+Skein hash https://github.com/drostie/sha3-js
